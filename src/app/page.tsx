@@ -19,7 +19,7 @@ const faqs = [
 export default function Home() {
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
-    <header className="site-header"><a className="brand" href="#top"><span className="brand-mark">F</span><span>Gourd <i>&</i> Garland</span></a><nav aria-label="Primary navigation"><a href="#process">How it works</a><a href="#packages">Packages</a><a href="#service-area">Service area</a></nav><a className="header-cta" href="#inquire">Fall 2026 list</a></header>
+    <header className="site-header"><a className="brand" href="#top"><span className="brand-mark">F</span><span>Front <i>&</i> Found</span></a><nav aria-label="Primary navigation"><a href="#process">How it works</a><a href="#packages">Packages</a><a href="#service-area">Service area</a></nav><a className="header-cta" href="#inquire">Fall 2026 list</a></header>
     <main id="main">
       <section className="hero" id="top">
         <Image src="/hero.jpg" alt="AI design concept of an elegant New England porch styled with pumpkins, mums, garland, and lanterns" fill priority sizes="100vw" />
@@ -43,6 +43,6 @@ export default function Home() {
 
       <section className="inquire section-pad" id="inquire"><div className="inquire-copy"><p className="eyebrow">Fall 2026 priority list</p><h2>Be first at<br/><em>the doorstep.</em></h2><p>Tell us where you are and what you’re imagining. Priority-list members will hear first when consultation windows, final packages, and installation dates open.</p><div className="season-note"><span>Limited first-season route</span><p>Joining is free and does not reserve a date or require a deposit.</p></div></div><InquiryForm /></section>
     </main>
-    <footer><a className="brand footer-brand" href="#top"><span className="brand-mark">F</span><span>Gourd <i>&</i> Garland</span></a><p>Seasonal magic, styled at your doorstep.</p><p className="copyright">© 2026 Front & Found. Fall 2026 launch.</p></footer>
+    <footer><a className="brand footer-brand" href="#top"><span className="brand-mark">F</span><span>Front <i>&</i> Found</span></a><p>Seasonal magic, styled at your doorstep.</p><p className="copyright">© 2026 Front & Found. Fall 2026 launch.</p></footer>
   </>;
 }
