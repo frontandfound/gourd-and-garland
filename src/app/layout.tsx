@@ -3,17 +3,17 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gourd-and-garland.vercel.app"),
-  title: "Gourd & Garland | Seasonal Porch Styling Near Boston",
+  title: "Front & Found | Seasonal Porch Styling Near Boston",
   description: "Premium fall porch styling for Boston’s southwest suburbs. Delivery, design, installation, and optional removal—without the shopping or heavy lifting.",
   keywords: ["porch styling Boston", "fall porch decorating", "pumpkin delivery", "seasonal decorating Massachusetts"],
   openGraph: {
-    title: "Gourd & Garland | Seasonal magic, styled at your doorstep.",
+    title: "Front & Found | Seasonal magic, styled at your doorstep.",
     description: "Premium fall porch styling for Boston’s southwest suburbs. Fall 2026 priority list now open.",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Gourd & Garland — Seasonal magic, styled at your doorstep." }]
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Front & Found — Seasonal magic, styled at your doorstep." }]
   },
-  twitter: { card: "summary_large_image", title: "Gourd & Garland", description: "Seasonal magic, styled at your doorstep.", images: ["/og.jpg"] },
+  twitter: { card: "summary_large_image", title: "Front & Found", description: "Seasonal magic, styled at your doorstep.", images: ["/og.jpg"] },
   robots: { index: true, follow: true }
 };
 
