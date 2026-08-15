@@ -1,4 +1,4 @@
-# Gourd & Garland
+# Front & Found
 
 Premium seasonal porch styling website for the Fall 2026 launch in Boston's southwest suburbs.
 
