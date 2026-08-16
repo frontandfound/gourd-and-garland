@@ -21,19 +21,19 @@ const structuredData = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://gourd-and-garland.vercel.app/#organization",
+      "@id": "https://front-and-found.vercel.app/#organization",
       name: "Front & Found",
-      url: "https://gourd-and-garland.vercel.app/",
+      url: "https://front-and-found.vercel.app/",
       description: "Premium seasonal porch styling for Boston’s southwest suburbs."
     },
     {
       "@type": "Service",
-      "@id": "https://gourd-and-garland.vercel.app/#service",
+      "@id": "https://front-and-found.vercel.app/#service",
       name: "Front & Found Seasonal Porch Styling",
       serviceType: "Seasonal porch design, delivery, installation, and optional removal",
-      provider: { "@id": "https://gourd-and-garland.vercel.app/#organization" },
+      provider: { "@id": "https://front-and-found.vercel.app/#organization" },
       areaServed: ["Dedham", "Westwood", "Norwood", "Walpole", "Medfield"],
-      url: "https://gourd-and-garland.vercel.app/"
+      url: "https://front-and-found.vercel.app/"
     }
   ]
 };

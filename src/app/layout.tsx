@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gourd-and-garland.vercel.app"),
+  metadataBase: new URL("https://front-and-found.vercel.app"),
   title: "Front & Found | Seasonal Porch Styling Near Boston",
   description: "Premium fall porch styling for Boston’s southwest suburbs. Delivery, design, installation, and optional removal—without the shopping or heavy lifting.",
   keywords: ["porch styling Boston", "fall porch decorating", "pumpkin delivery", "seasonal decorating Massachusetts"],
