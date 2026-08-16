@@ -11,9 +11,9 @@ export const metadata: Metadata = {
     description: "Premium fall porch styling for Boston’s southwest suburbs. Fall 2026 priority list now open.",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Front & Found — Seasonal magic, styled at your doorstep." }]
+    images: [{ url: "/front-and-found-og.jpg", width: 1200, height: 630, alt: "Front & Found — Seasonal magic, styled at your doorstep." }]
   },
-  twitter: { card: "summary_large_image", title: "Front & Found", description: "Seasonal magic, styled at your doorstep.", images: ["/og.jpg"] },
+  twitter: { card: "summary_large_image", title: "Front & Found", description: "Seasonal magic, styled at your doorstep.", images: ["/front-and-found-og.jpg"] },
   robots: { index: true, follow: true }
 };
 

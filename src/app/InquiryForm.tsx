@@ -17,7 +17,7 @@ export default function InquiryForm() {
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || "We couldn’t send your request.");
       setStatus("sent");
-      setMessage("You’re on the list. We’ll be in touch as Fall 2026 plans take shape.");
+      setMessage("You’re on the Front & Found list. We’ll be in touch as Fall 2026 plans take shape.");
       form.reset();
     } catch (error) {
       setStatus("error");
@@ -26,7 +26,7 @@ export default function InquiryForm() {
   }
 
   return (
-    <form className="inquiry-form" onSubmit={submit} aria-label="Fall 2026 priority list form">
+    <form className="inquiry-form" onSubmit={submit} aria-label="Front & Found Fall 2026 priority list form">
       <div className="form-row">
         <label>First name<input name="firstName" autoComplete="given-name" required /></label>
         <label>Last name<input name="lastName" autoComplete="family-name" required /></label>

@@ -16,10 +16,33 @@ const faqs = [
   ["Do you serve Pennsylvania?", "Pennsylvania is a planned future expansion. Join the list and choose your location—we’ll use interest to shape the next service area."]
 ];
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gourd-and-garland.vercel.app/#organization",
+      name: "Front & Found",
+      url: "https://gourd-and-garland.vercel.app/",
+      description: "Premium seasonal porch styling for Boston’s southwest suburbs."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://gourd-and-garland.vercel.app/#service",
+      name: "Front & Found Seasonal Porch Styling",
+      serviceType: "Seasonal porch design, delivery, installation, and optional removal",
+      provider: { "@id": "https://gourd-and-garland.vercel.app/#organization" },
+      areaServed: ["Dedham", "Westwood", "Norwood", "Walpole", "Medfield"],
+      url: "https://gourd-and-garland.vercel.app/"
+    }
+  ]
+};
+
 export default function Home() {
   return <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <a className="skip-link" href="#main">Skip to content</a>
-    <header className="site-header"><a className="brand" href="#top"><span className="brand-mark">F</span><span>Front <i>&</i> Found</span></a><nav aria-label="Primary navigation"><a href="#process">How it works</a><a href="#packages">Packages</a><a href="#service-area">Service area</a></nav><a className="header-cta" href="#inquire">Fall 2026 list</a></header>
+    <header className="site-header"><a className="brand" href="#top" aria-label="Front & Found home"><span className="brand-mark">F</span><span>Front <i>&</i> Found</span></a><nav aria-label="Primary navigation"><a href="#process">How it works</a><a href="#packages">Packages</a><a href="#service-area">Service area</a></nav><a className="header-cta" href="#inquire">Fall 2026 list</a></header>
     <main id="main">
       <section className="hero" id="top">
         <Image src="/hero.jpg" alt="AI design concept of an elegant New England porch styled with pumpkins, mums, garland, and lanterns" fill priority sizes="100vw" />
@@ -33,7 +56,7 @@ export default function Home() {
 
       <section className="packages section-pad" id="packages"><div className="section-heading"><div><p className="eyebrow">Preliminary Fall 2026 packages</p><h2>Choose your<br/><em>moment.</em></h2></div><p>Starting prices are preliminary while final sourcing and route costs are confirmed. Every design is adjusted to fit the porch.</p></div><div className="package-grid">{packages.map((pkg, i) => <article className={pkg.featured ? "package featured" : "package"} key={pkg.name}>{pkg.featured && <p className="popular">Most requested scale</p>}<span className="package-number">0{i + 1}</span><h3>{pkg.name}</h3><p className="package-price">{pkg.price} <small>preliminary</small></p><p className="package-note">{pkg.note}</p><ul>{pkg.items.map(item => <li key={item}>{item}</li>)}</ul><a href="#inquire">Ask about this package <span aria-hidden="true">→</span></a></article>)}</div><p className="package-footnote">Optional removal, unusually large porches, specialty vessels, and travel beyond the core route are quoted separately.</p></section>
 
-      <section className="gallery section-pad"><div className="gallery-heading"><p className="eyebrow">Design studies</p><h2>Autumn, in<br/><em>your home’s language.</em></h2><p>Original AI-generated design concepts created for Front & Found. These are visual directions—not photographs of completed client work.</p></div><div className="gallery-grid"><figure><div className="triptych crop-left" role="img" aria-label="AI concept of a brick stoop with pumpkins, mums, and lanterns"/><figcaption><span>01</span> The Borough Stoop</figcaption></figure><figure><div className="triptych crop-center" role="img" aria-label="AI concept of a broad clapboard porch with heirloom pumpkins and dried botanicals"/><figcaption><span>02</span> The Gathered Porch</figcaption></figure><figure><div className="triptych crop-right" role="img" aria-label="AI concept detail with brass lantern and pale gourds on stone steps"/><figcaption><span>03</span> The Quiet Detail</figcaption></figure></div></section>
+      <section className="gallery section-pad"><div className="gallery-heading"><p className="eyebrow">Design studies</p><h2>Autumn, in<br/><em>your home’s language.</em></h2><p>Original AI-generated design concepts created for Front & Found. These are visual directions—not photographs of completed client work.</p></div><div className="gallery-grid"><figure><div className="triptych crop-left" role="img" aria-label="Front & Found AI concept of a brick stoop with pumpkins, mums, and lanterns"/><figcaption><span>01</span> The Borough Stoop</figcaption></figure><figure><div className="triptych crop-center" role="img" aria-label="Front & Found AI concept of a broad clapboard porch with heirloom pumpkins and dried botanicals"/><figcaption><span>02</span> The Gathered Porch</figcaption></figure><figure><div className="triptych crop-right" role="img" aria-label="Front & Found AI concept detail with brass lantern and pale gourds on stone steps"/><figcaption><span>03</span> The Quiet Detail</figcaption></figure></div></section>
 
       <section className="service-area section-pad" id="service-area"><div className="area-copy"><p className="eyebrow">The first route</p><h2>Rooted near Boston.<br/><em>Designed to grow.</em></h2><p>Our Fall 2026 launch is focused on a compact southwest-suburban route so every installation receives the time it deserves.</p><ul><li>Dedham</li><li>Westwood</li><li>Norwood</li><li>Walpole</li><li>Medfield</li></ul><p className="area-note">Nearby town? Join the list anyway. We’ll confirm availability as routes take shape. Pennsylvania is planned as a future expansion.</p></div><div className="area-art" aria-hidden="true"><span className="map-ring one"/><span className="map-ring two"/><span className="map-ring three"/><span className="map-pin">F<span>Boston area</span></span></div></section>
 
@@ -43,6 +66,6 @@ export default function Home() {
 
       <section className="inquire section-pad" id="inquire"><div className="inquire-copy"><p className="eyebrow">Fall 2026 priority list</p><h2>Be first at<br/><em>the doorstep.</em></h2><p>Tell us where you are and what you’re imagining. Priority-list members will hear first when consultation windows, final packages, and installation dates open.</p><div className="season-note"><span>Limited first-season route</span><p>Joining is free and does not reserve a date or require a deposit.</p></div></div><InquiryForm /></section>
     </main>
-    <footer><a className="brand footer-brand" href="#top"><span className="brand-mark">F</span><span>Front <i>&</i> Found</span></a><p>Seasonal magic, styled at your doorstep.</p><p className="copyright">© 2026 Front & Found. Fall 2026 launch.</p></footer>
+    <footer><a className="brand footer-brand" href="#top" aria-label="Front & Found home"><span className="brand-mark">F</span><span>Front <i>&</i> Found</span></a><p>Seasonal magic, styled at your doorstep.</p><p className="copyright">© 2026 Front & Found. Fall 2026 launch.</p></footer>
   </>;
 }

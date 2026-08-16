@@ -18,7 +18,7 @@ export async function POST(request: Request) {
       from: "Front & Found <onboarding@resend.dev>",
       to: [process.env.INQUIRY_TO_EMAIL],
       reply_to: clean(body.email),
-      subject: `Fall 2026 porch inquiry — ${clean(body.firstName)} ${clean(body.lastName)}`,
+      subject: `Front & Found Fall 2026 porch inquiry — ${clean(body.firstName)} ${clean(body.lastName)}`,
       text: [`Name: ${clean(body.firstName)} ${clean(body.lastName)}`, `Email: ${clean(body.email)}`, `Location: ${clean(body.location)}`, `Package: ${clean(body.package)}`, "", clean(body.notes)].join("\n")
     })
   });
